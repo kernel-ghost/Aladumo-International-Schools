@@ -1,0 +1,72 @@
+/* ============================================================
+   tokens.css — Design Tokens (single source of truth)
+   Edit brand colours, fonts, spacing & radii here. Every
+   component references these variables, so changing a token
+   updates the whole site.
+   Extracted from the original Aladumo International Schools site.
+   ============================================================ */
+
+:root {
+  /* ---- Brand colours ---- */
+  --c-primary:        #6528F7; /* violet — links/buttons (global-color-0) */
+  --c-primary-dark:   #5511F8; /* hover violet            (global-color-1) */
+  --c-primary-soft:   #D8D8F5; /* tint                    (global-color-6) */
+
+  --c-blue:           #0D47A1; /* deep blue — section bands & cards */
+  --c-blue-mid:       #1565C0; /* card fronts / accents */
+  --c-blue-light:     #1976D2; /* hovers / card backs */
+
+  --c-gold:           #FFD700; /* highlight (names, icons) */
+  --c-gold-soft:      #FFECB3; /* secondary highlight */
+
+  /* ---- Neutrals / surfaces ---- */
+  --c-page-bg:        #F2F0FE; /* page background (global-color-4) */
+  --c-section-light:  #F4F8FF; /* light section background */
+  --c-section-tint:   #F1F8FF; /* founder light band */
+  --c-white:          #FFFFFF;
+
+  --c-ink:            #0F172A; /* primary text / headings (global-color-2) */
+  --c-ink-soft:       #454F5E; /* secondary text         (global-color-3) */
+  --c-body:           #333333; /* widget body copy */
+  --c-border:         #DDDDDD;
+
+  /* ---- Typography ---- */
+  --font-serif: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Inter', Arial, system-ui, -apple-system, sans-serif;
+  --font-widget: Arial, 'Inter', system-ui, sans-serif; /* faithful to original widgets */
+
+  --fs-hero:    clamp(2.25rem, 5.2vw, 4.25rem); /* h1 hero */
+  --fs-h2:      clamp(1.6rem, 3.5vw, 2rem);  /* section titles (~32px) */
+  --fs-h3:      1.25rem;
+  --fs-body:    1rem;
+  --lh-body:    1.7;
+
+  /* ---- Layout ---- */
+  --container:      1200px;
+  --container-wide: 1240px;
+  --header-h:       90px;
+
+  /* ---- Spacing scale ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3.75rem;  /* ~60px section padding */
+  --space-xl: 5rem;
+
+  /* ---- Radius ---- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 15px;
+  --r-pill: 30px;
+
+  /* ---- Shadows ---- */
+  --sh-card:  0 8px 20px rgba(0,0,0,0.10);
+  --sh-hover: 0 12px 28px rgba(0,0,0,0.25);
+  --sh-soft:  0 10px 25px rgba(0,0,0,0.10);
+  --sh-strong:0 15px 35px rgba(0,0,0,0.30);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --t-fast: 0.3s;
+  --t-med:  0.6s;
+}

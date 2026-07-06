@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events - Aladumo International Schools</title>
+    <meta
+      name="description"
+      content="View event and school life photos from Aladumo International Schools."
+    />
+    <link rel="icon" sizes="32x32" href="assets/images/aladumo-logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-bar">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Aladumo International Schools - Home"
+          ><img
+            src="assets/images/aladumo-logo.jpg"
+            width="120"
+            height="120"
+            alt="Aladumo International Schools logo"
+        /></a>
+        <nav class="primary-nav" aria-label="Primary">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a class="nav-link" href="academics.html"
+                >Our Academics
+                <svg class="caret" viewBox="0 0 26 16" aria-hidden="true">
+                  <path d="M.5 3 13 15.5 25.5 3 23 .5 13 10.5 3 .5z" /></svg
+              ></a>
+              <ul class="submenu">
+                <li><a href="facilities.html">Facilities</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admission.html">Admission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item is-current">
+              <a class="nav-link" href="events.html" aria-current="page"
+                >Events</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M3 13h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2zM3 7h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2zM3 19h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Mobile menu">
+      <div class="drawer-head">
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M5.3 6.7 10.6 12l-5.3 5.3a1 1 0 1 0 1.4 1.4L12 13.4l5.3 5.3a1 1 0 0 0 1.4-1.4L13.4 12l5.3-5.3a1 1 0 0 0-1.4-1.4L12 10.6 6.7 5.3a1 1 0 0 0-1.4 1.4z"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav" aria-label="Mobile">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="academics.html">Our Academics</a>
+        <div class="drawer-sub"><a href="facilities.html">Facilities</a></div>
+        <a href="admission.html">Admission</a><a href="contact.html">Contact</a
+        ><a href="events.html" aria-current="page">Events</a>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <section
+        class="page-hero"
+        style="
+          background-image: url(&quot;assets/images/7e03dde0-01be-4e5d-a00f-4eda2878fcc1.jpg&quot;);
+        "
+      >
+        <div class="container">
+          <hr class="page-hero__rule reveal" />
+          <h1 class="page-hero__title reveal">Events</h1>
+          <p class="page-hero__text reveal">
+            Moments from cultural activities, science learning, creativity,
+            sports, and school community life.
+          </p>
+        </div>
+      </section>
+
+      <section class="section gallery">
+        <div class="container">
+          <h2 class="section-title reveal">School Gallery</h2>
+          <div class="event-grid" id="gallery">
+            <a
+              href="assets/images/7e03dde0-01be-4e5d-a00f-4eda2878fcc1.jpg"
+              class="reveal"
+              ><img
+                src="assets/images/7e03dde0-01be-4e5d-a00f-4eda2878fcc1.jpg"
+                alt="Cultural day activity"
+                loading="lazy"
+            /></a>
+            <a
+              href="assets/images/c6b0fa60-0ea3-4747-aa1d-d2d242536826.jpg"
+              class="reveal"
+              ><img
+                src="assets/images/c6b0fa60-0ea3-4747-aa1d-d2d242536826.jpg"
+                alt="Creative school activity"
+                loading="lazy"
+            /></a>
+            <a
+              href="assets/images/58c40d95-203c-40f8-9cea-60d9314bb3a2.jpg"
+              class="reveal"
+              ><img
+                src="assets/images/58c40d95-203c-40f8-9cea-60d9314bb3a2.jpg"
+                alt="Orientation activity"
+                loading="lazy"
+            /></a>
+            <a
+              href="assets/images/c34f99d0-7375-4b80-8533-1be1c5564fac.jpg"
+              class="reveal"
+              ><img
+                src="assets/images/biologyLab.jpg"
+                alt="Science activity"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/sports-activity.jpg" class="reveal"
+              ><img
+                src="assets/images/sports-activity.jpg"
+                alt="Sports activity"
+                loading="lazy"
+            /></a>
+            <a
+              href="assets/images/31b3a5e8-f610-4c32-9659-c0574f405038.jpg"
+              class="reveal"
+              ><img
+                src="assets/images/31b3a5e8-f610-4c32-9659-c0574f405038.jpg"
+                alt="Language activity"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/DARB2536.jpg" class="reveal"
+              ><img
+                src="assets/images/DARB2536-768x576.jpg"
+                alt="School event photo"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/EOEB6462-2048x1536.jpg" class="reveal"
+              ><img
+                src="assets/images/EOEB6462-768x576.jpg"
+                alt="School event photo"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/KWZP7025.jpg" class="reveal"
+              ><img
+                src="assets/images/KWZP7025-768x576.jpg"
+                alt="School event photo"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/MWVT9629-2048x1536.jpg" class="reveal"
+              ><img
+                src="assets/images/MWVT9629-768x576.jpg"
+                alt="School event photo"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/WQOJ6801-2048x1536.jpg" class="reveal"
+              ><img
+                src="assets/images/WQOJ6801-768x576.jpg"
+                alt="School event photo"
+                loading="lazy"
+            /></a>
+            <a href="assets/images/YHVL4487-2048x1536.jpg" class="reveal"
+              ><img
+                src="assets/images/YHVL4487-768x576.jpg"
+                alt="School event photo"
+                loading="lazy"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--blue">
+        <div class="container">
+          <h2 class="section-title reveal">Learning Beyond the Classroom</h2>
+          <div class="flip-grid">
+            <div class="flip-card reveal" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__face flip-card__front">
+                  <i class="fas fa-theater-masks" aria-hidden="true"></i>
+                  <h3>Culture</h3>
+                </div>
+                <div class="flip-card__face flip-card__back">
+                  Events give students a chance to celebrate heritage,
+                  creativity, confidence, and expression.
+                </div>
+              </div>
+            </div>
+            <div class="flip-card reveal" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__face flip-card__front">
+                  <i class="fas fa-medal" aria-hidden="true"></i>
+                  <h3>Sports</h3>
+                </div>
+                <div class="flip-card__face flip-card__back">
+                  Sports activities strengthen teamwork, discipline, resilience,
+                  and healthy competition.
+                </div>
+              </div>
+            </div>
+            <div class="flip-card reveal" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__face flip-card__front">
+                  <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                  <h3>Creativity</h3>
+                </div>
+                <div class="flip-card__face flip-card__back">
+                  Creative programmes help learners discover ideas, talents, and
+                  new ways to communicate.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about">
+        <div class="container">
+          <h2 class="section-title reveal">Event Enquiries</h2>
+          <div class="contact-grid">
+            <div class="contact-stack">
+              <article class="contact-card reveal">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <h3>Phone</h3>
+                <p>
+                  <a href="tel:09032443883">09032443883</a>,
+                  <a href="tel:08033549625">08033549625</a>
+                </p>
+              </article>
+              <article class="contact-card reveal">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <h3>Opening Hours</h3>
+                <p>8:00 a.m. - 5:00 p.m.</p>
+              </article>
+              <article class="contact-card reveal">
+                <i class="fas fa-school" aria-hidden="true"></i>
+                <h3>School</h3>
+                <p>Aladumo International Schools</p>
+              </article>
+            </div>
+
+            <form
+              class="contact-form reveal"
+              id="eventsForm"
+              action="https://formsubmit.co/emmanuelegbuhuzor6@gmail.com"
+              method="POST"
+              novalidate
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Events Enquiry - Aladumo International Schools"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="text"
+                name="_honey"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+              <div class="field-grid">
+                <label class="form-field"
+                  >Name<input
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    required
+                /></label>
+                <label class="form-field"
+                  >Email<input
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                /></label>
+              </div>
+              <label class="form-field"
+                >Phone<input type="tel" name="phone" autocomplete="tel"
+              /></label>
+              <label class="form-field"
+                >Which event are you asking about?<textarea
+                  name="message"
+                  required
+                ></textarea>
+              </label>
+              <button class="btn btn--blue" type="submit">Send Enquiry</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-primary">
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter"
+            ><i class="fab fa-twitter" aria-hidden="true"></i></a
+          ><a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f" aria-hidden="true"></i></a
+          ><a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram" aria-hidden="true"></i
+          ></a>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academics.html">Our Academics</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h2>Contact</h2>
+          <p>09032443883, 08033549625</p>
+          <p>8:00 a.m. - 5:00 p.m.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright &copy; <span id="year">2025</span> Aladumo International
+        Schools
+      </div>
+    </footer>
+    <button class="to-top" id="toTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z" />
+      </svg>
+    </button>
+    <div
+      class="lightbox"
+      id="lightbox"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Image viewer"
+    >
+      <button
+        class="lightbox__btn lightbox__close"
+        id="lbClose"
+        aria-label="Close"
+      >
+        &times;</button
+      ><button
+        class="lightbox__btn lightbox__prev"
+        id="lbPrev"
+        aria-label="Previous"
+      >
+        &#8249;</button
+      ><img id="lbImg" src="" alt="" /><button
+        class="lightbox__btn lightbox__next"
+        id="lbNext"
+        aria-label="Next"
+      >
+        &#8250;
+      </button>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+/* ============================================================
+   base.css — Reset, base elements & shared utilities
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); overflow-x: hidden; }
+
+body {
+  margin: 0;
+  padding-top: var(--header-h);            /* clears the fixed header */
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--c-ink);
+  background: var(--c-page-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;                      /* clip reveal-animation translateX before it settles */
+}
+
+img { max-width: 100%; display: block; height: auto; }
+
+a { color: var(--c-primary); text-decoration: none; transition: color var(--t-fast) var(--ease); }
+a:hover { color: var(--c-primary-dark); }
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); line-height: 1.2; margin: 0 0 .4em; color: var(--c-ink); }
+
+p { margin: 0 0 1em; }
+
+button { font-family: inherit; cursor: pointer; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+::selection { background: var(--c-primary); color: #fff; }
+
+/* ---- Layout helpers ---- */
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: 20px; }
+.section   { padding-block: var(--space-lg); }
+.section--light { background: var(--c-section-light); }
+.section--blue  { background: var(--c-blue); color: #fff; }
+.text-center { text-align: center; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ---- Section heading shared style ---- */
+.section-title {
+  text-align: center;
+  font-size: var(--fs-h2);
+  color: var(--c-blue);
+  margin-bottom: var(--space-md);
+}
+.section--blue .section-title { color: #fff; }
+
+/* ---- Scroll-reveal (progressive enhancement) ---- */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal--left  { transform: translateX(-50px); }
+.reveal--right { transform: translateX(50px); }
+.reveal--zoom  { transform: scale(.85); }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}

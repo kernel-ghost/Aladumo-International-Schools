@@ -1,0 +1,76 @@
+/* ============================================================
+   responsive.css — Breakpoints
+   Mirrors the original site's breakpoints:
+   921px (header collapses), 992px (grids), 768px & 600px (mobile)
+   ============================================================ */
+
+/* ---------- Tablet & below: collapse navigation ---------- */
+@media (max-width: 921px) {
+  :root { --header-h: 80px; }
+
+  .primary-nav { display: none; }
+  .nav-toggle  { display: inline-flex; }
+
+  .footer-primary { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; padding: 40px 24px 24px; }
+  .footer-social  { justify-content: center; }
+  .footer-contact { text-align: center; }
+
+  .icon-grid--facilities { grid-template-columns: repeat(2, 1fr); }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .value-list { grid-template-columns: repeat(2, 1fr); }
+  .program-list { grid-template-columns: 1fr; }
+  .event-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Gallery / facilities: 2-up ---------- */
+@media (max-width: 992px) {
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- ~768px tweaks ---------- */
+@media (max-width: 768px) {
+  :root { --header-h: 72px; }
+
+  .hero { min-height: 460px; }
+  .hero__title { max-width: 13ch; }
+  .person__inner { flex-direction: column; gap: 25px; }
+  .person__text { text-align: center; }
+  .section-title { font-size: 1.6rem; }
+  .page-hero { min-height: 270px; }
+  .split-panel,
+  .split-panel--reverse { grid-template-columns: 1fr; }
+  .split-panel--reverse .split-panel__media { order: -1; }
+  .value-list { grid-template-columns: 1fr; }
+  .event-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Phones: single column ---------- */
+@media (max-width: 600px) {
+  :root { --header-h: 58px; }
+
+  .header-bar { min-height: var(--header-h); }
+  .brand img { width: 43px; }
+  .nav-toggle { width: 38px; height: 34px; border-radius: 6px; }
+  .nav-toggle svg { width: 19px; height: 19px; }
+  .container { padding-inline: 20px; }
+  .hero { min-height: 360px; background-position: center top; }
+  .hero__title { font-size: clamp(2rem, 10vw, 2.45rem); max-width: 12ch; }
+  .hero__subtitle { font-size: .95rem; letter-spacing: .08em; }
+  .about__box { font-size: .92rem; line-height: 1.72; }
+  .about__box p { text-align: left; }
+  .gallery__grid { grid-template-columns: 1fr; }
+  .icon-grid--facilities { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .page-hero { min-height: 230px; }
+  .page-hero__title { font-size: clamp(2rem, 11vw, 2.55rem); }
+  .content-card { padding: 22px; font-size: .93rem; line-height: 1.72; }
+  .program-card { grid-template-columns: 1fr; }
+  .program-card__body { padding: 22px; }
+  .field-grid { grid-template-columns: 1fr; }
+  .event-grid { grid-template-columns: 1fr; }
+  .event-grid img { height: 230px; }
+  .about__box { padding: 22px; }
+  .subscribe { flex-direction: column; }
+  .subscribe .btn { width: 100%; }
+}
